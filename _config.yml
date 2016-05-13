@@ -10,7 +10,7 @@ title: Hemang Kumar
 email: hemangsk@gmail.com
 
 #write html inside the double quotes to display in jumbotron
-description: "<h1>Hello, world!</h1><h3>I'm Hemang,  a software engineer in making.</h3><h4>I've designed this jekyll theme <em>DevJournal</em> for a developer's blog.</h4>Hope you like it!"
+description: "<h3>Hello, world!</h3><h1>DevJournal</h1><h3>Awesome Jekyll Theme for Developers!</h3>Hope you like it!"
 
 
 
