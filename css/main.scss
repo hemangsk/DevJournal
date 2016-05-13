@@ -48,7 +48,8 @@ body{
 }
 
 .page-stuff{
-  padding-top: 5em;
+  padding-top: 2em;
+  padding-bottom: 5em;
 }
 .jumbotron {
   background: #093750 !important;
@@ -110,6 +111,38 @@ code{
   color: white !important;
   border: none !important;
   border-radius: 0px !important;
+}
+
+.page-tagline{
+  font-size: 20px;
+text-align: center;
+}
+
+.download{
+  padding:2em;
+  font-size: 19px;
+}
+.intro{
+  font-size: 19px;
+
+}
+.manual-title{
+  font-size: 21px;
+  padding: 1em;
+  text-transform: uppercase;
+
+}
+.manual-content{
+  text-align: justify;
+  font-size: 19px;
+}
+
+.man-title{
+  font-size: 22px;
+  text-align: center;
+  padding: 1em;
+  letter-spacing: 2px;
+
 }
 // Our variables
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
