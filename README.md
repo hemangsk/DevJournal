@@ -1,3 +1,5 @@
+If there's any issue you are facing in setting up DevJournal theme, I'm there for you. Just create an issue in this repository (http://github.com/hemangsk/DevJournal), (https://help.github.com/articles/creating-an-issue/) and I'll get back to you asap. :smile: :+1:<br>
+
 ![alt-tag](https://farm8.staticflickr.com/7062/26385542743_1c7e6b8d9e_o.png) 
 
 ![alt-tag](https://farm8.staticflickr.com/7320/26385629583_eac6861c48_o.png)
@@ -5,8 +7,7 @@
 
 ![alt-tag](https://farm8.staticflickr.com/7300/26895705412_d6365b9a14_o.png)
 
-<br>
-If there's any issue you are facing in setting up DevJournal theme, I'm there for you. Just create an issue in this repository (http://github.com/hemangsk/DevJournal), (https://help.github.com/articles/creating-an-issue/) and I'll get back to you asap. :smile: :+1:
+
 
 ![alt-tag](https://farm8.staticflickr.com/7370/26956762406_cbfa7a2139_o.png)
 
