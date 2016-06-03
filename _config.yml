@@ -14,8 +14,8 @@ description: "<h3>Hello, world!</h3><h1>DevJournal</h1><h3>Awesome Jekyll Theme 
 
 
 
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+baseurl: "/DevJournal" # the subpath of your site, e.g. /blog
+url: "http://hemangsk.github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
