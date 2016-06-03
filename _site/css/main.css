@@ -119,6 +119,12 @@ code {
   padding: 1em;
   letter-spacing: 2px; }
 
+.jumbotron {
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15); }
+
+.navbar {
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15); }
+
 /**
  * Syntax highlighting styles
  */

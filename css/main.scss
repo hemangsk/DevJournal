@@ -144,6 +144,13 @@ text-align: center;
   letter-spacing: 2px;
 
 }
+
+.jumbotron{
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
+}
+.navbar{
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
+}
 // Our variables
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
