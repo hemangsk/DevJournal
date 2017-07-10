@@ -4,10 +4,10 @@ title: About
 permalink: /about/
 ---
 <div class="man-title">
-  UP AND RUNNING WITH DevJournal
+  Charles Talmadge
 </div>
 <div class="manual manual-title">
-  Posting
+  Swerve
   </div>
 <p>  <div class="manual-content">
 
