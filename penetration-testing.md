@@ -1,16 +1,15 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Penetration Testing
+permalink: /penetration-testing/
 ---
 <div class="man-title">
-  UP AND RUNNING WITH DevJournal
+  Vulnhub Walthroughs  
 </div>
 <div class="manual manual-title">
   Posting
   </div>
 <p>  <div class="manual-content">
-
 
 
   </div>
