@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Penetration Testing
-permalink: /penetration-testing/
+title: CTF
+permalink: /ctf/
 ---
 <div class="man-title">
-  Vulnerable Machines Walkthrough
+  CTF Walkthroughs  
 </div>
 <div class="manual manual-title">
   Posting

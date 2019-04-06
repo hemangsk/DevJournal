@@ -42,7 +42,7 @@ If there's any issue you are facing in setting up DevJournal theme, I'm there fo
 ![alt-tag](https://farm8.staticflickr.com/7594/26385450183_37116c6d32_o.png)
 
 
-####Create new pages, such a breeze! :smile:
+#### Create new pages, such a breeze! :smile:
 - Create a .md file in the root directory.
 - Name the file with the desired page link name.
 ```
@@ -76,10 +76,11 @@ That's all folks.
 
 >Super Flexible, Minimal, Text Based jekyll theme for the kickass geek :sunglasses:
 
-####It'd be really cool if you,<br>
-1.  Create some new feature and would like to integrate in DevJournal. Pull requests are most invited.
-2.  Open issues if you find bugs.
-3.  Just so you know, the license type is MIT.
+#### It'd be really awesome if ,<br>
+1.  You wish to create some new feature and would like to integrate those in DevJournal. Pull requests are most welcome!
+2.  Consider opening issues if you find bugs or feature requests.
+
+Just so you know, the license type is MIT.
 
 
 >Its' all about being community driven.  :bus: :bus: :dash:

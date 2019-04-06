@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="Kyle Simmons" property="og:site_name">
+
+  <meta content="OverTheWire: Bandit Walkthrough" property="og:title">
+
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="<h2>Cyber stuff</h2><h3>&#92;x48&#92;x65&#92;x6c&#92;x6c&#92;x6f &#92;x57&#92;x6f&#92;x72&#92;x6c&#92;x64</h3>" property="og:description">
+
+
+  <meta content="http://localhost:4000/overthewire/ctf/2019/04/06/OverTheWire-Bandit.html" property="og:url">
+
+
+  <meta content="2019-04-06T17:31:43+01:00" property="article:published_time">
+  <meta content="http://localhost:4000/about/" property="article:author">
+
+
+  <meta property="og:image" content="">
+
+
+  
+  <meta content="OverTheWire" property="article:section">
+  
+
+
+  
+
+  <title>OverTheWire: Bandit Walkthrough</title>
+  <meta name="description" content="OverTheWire Bandit - The challenges are a great way of practicing Linux commands. There are 34 challenges in total to complete. Each challenge give you the p...">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/main.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+  <link rel="canonical" href="http://localhost:4000/overthewire/ctf/2019/04/06/OverTheWire-Bandit.html">
+  <link rel="alternate" type="application/rss+xml" title="Kyle Simmons" href="http://localhost:4000/feed.xml">
+</head>
+
+
+  <body>
+<section>
+<nav class="navbar navbar-default navbar-fixed-top">
+
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Kyle Simmons</a>
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        
+        <li><a href="/">Home</a></li>
+
+        
+
+        
+        
+        <li><a href="/ctf/">CTF</a></li>
+
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+        <li><a href="/penetration-testing/">Penetration Testing</a></li>
+
+        
+
+        
+
+
+      </ul>
+
+    <!--  <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Know More!</a></li>
+
+      </ul>-->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</section>
+
+<section>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="post-title-main" itemprop="name headline">OverTheWire: Bandit Walkthrough</h1>
+      <p class="post-meta"><time datetime="2019-04-06T17:31:43+01:00" itemprop="datePublished">Apr 6, 2019</time></p>
+      
+    </div>
+
+</div>
+
+
+  <div class="post-content container" itemprop="articleBody">
+    <p>OverTheWire Bandit - The challenges are a great way of practicing Linux commands. There are 34 challenges in total to complete. Each challenge give you the password to the next one and so on.</p>
+
+<p><a href="http://overthewire.org/wargames/bandit/">OverTheWire: Bandit - link</a></p>
+
+<p><br /></p>
+
+<h2>Bandit 0:</h2>
+
+<p>The first challenge goal is login via SSH over port 2220</p>
+
+<figure class="highlight"><pre><code class="language-shell_session" data-lang="shell_session"><span class="go">ssh -p 2220 bandit0@bandit.labs.overthewire.org
+
+</span><span class="gp">bandit0@bandit:~$</span> <span class="nb">ls</span> <span class="nt">-lrt</span>
+<span class="go">total 4
+-rw-r----- 1 bandit1 bandit0 33 Oct 16 14:00 readme
+
+</span><span class="gp">bandit0@bandit:~$</span> <span class="nb">cat </span>readme
+<span class="go">boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+</span><span class="gp">bandit0@bandit:~$</span></code></pre></figure>
+
+<p>The readme file outputted the password above.</p>
+
+<p><br /></p>
+<h2>Bandit 1:</h2>
+
+<p>The file uses a <code class="highlighter-rouge">-</code> which cannot be viewed by just typing in <code class="highlighter-rouge">cat -</code>. The relative path has to be used since the <code class="highlighter-rouge">-</code> is used for STDIN.</p>
+
+<figure class="highlight"><pre><code class="language-shell_session" data-lang="shell_session"><span class="gp">bandit1@bandit:~$</span> <span class="nb">ls</span> <span class="nt">-l</span>
+<span class="go">total 4
+-rw-r----- 1 bandit2 bandit1 33 Oct 16 14:00 -
+
+</span><span class="gp">bandit1@bandit:~$</span> <span class="nb">pwd</span>
+<span class="go">/home/bandit1
+
+</span><span class="gp">bandit1@bandit:~$</span> <span class="nb">cat</span> ./-
+<span class="go">CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9
+</span><span class="gp">bandit1@bandit:~$</span></code></pre></figure>
+
+<p><br /></p>
+<h2>Bandit 2:</h2>
+
+<p>The file can be viewed by just entering a few letters of the file and pressing tab to auto complete, instead of manually typing in the <code class="highlighter-rouge">\</code>.</p>
+
+<figure class="highlight"><pre><code class="language-shell_session" data-lang="shell_session"><span class="gp">bandit2@bandit:~$</span> <span class="nb">ls</span> <span class="nt">-l</span>
+<span class="go">total 4
+-rw-r----- 1 bandit3 bandit2 33 Oct 16 14:00 spaces in this filename
+
+</span><span class="gp">bandit2@bandit:~$</span> <span class="nb">cat </span>spaces<span class="se">\ </span><span class="k">in</span><span class="se">\ </span>this<span class="se">\ </span>filename
+<span class="go">UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK
+</span><span class="gp">bandit2@bandit:~$</span></code></pre></figure>
+
+<p><br /></p>
+<h2>Bandit 3:</h2>
+
+<p>The <code class="highlighter-rouge">ls</code> shows the inhere directory.</p>
+
+<figure class="highlight"><pre><code class="language-shell_session" data-lang="shell_session"><span class="gp">bandit3@bandit:~$</span> <span class="nb">ls</span> <span class="nt">-l</span>
+<span class="go">total 4
+drwxr-xr-x 2 root root 4096 Oct 16 14:00 inhere
+
+</span><span class="gp">bandit3@bandit:~$</span> <span class="nb">cd </span>inhere/</code></pre></figure>
+
+<p><br />
+Inside the <code class="highlighter-rouge">inhere</code> directory there, the <code class="highlighter-rouge">-a</code> flag on <code class="highlighter-rouge">ls</code> shows the hidden file.</p>
+
+<figure class="highlight"><pre><code class="language-shell_session" data-lang="shell_session"><span class="gp">bandit3@bandit:~/inhere$</span> <span class="nb">ls</span> <span class="nt">-la</span>
+<span class="go">total 12
+drwxr-xr-x 2 root    root    4096 Oct 16 14:00 .
+drwxr-xr-x 3 root    root    4096 Oct 16 14:00 ..
+-rw-r----- 1 bandit4 bandit3   33 Oct 16 14:00 .hidden
+
+</span><span class="gp">bandit3@bandit:~/inhere$</span> <span class="nb">cat</span> .hidden
+<span class="go">pIwrPrtPN36QITSp3EQaw936yaFoFgAB
+</span><span class="gp">bandit3@bandit:~/inhere$</span></code></pre></figure>
+
+<p><br /></p>
+<h2>Bandit 4:</h2>
+
+<p>When viewing inside the <code class="highlighter-rouge">inhere</code> directory there are 9 files with one containing the password.</p>
+
+<figure class="highlight"><pre><code class="language-shell_session" data-lang="shell_session"><span class="gp">bandit4@bandit:~$</span> <span class="nb">ls</span> <span class="nt">-l</span>
+<span class="go">total 4
+drwxr-xr-x 2 root root 4096 Oct 16 14:00 inhere
+</span><span class="gp">bandit4@bandit:~$</span> <span class="nb">cd </span>inhere/
+<span class="gp">bandit4@bandit:~/inhere$</span> <span class="nb">ls</span> <span class="nt">-l</span>
+<span class="go">total 40
+-rw-r----- 1 bandit5 bandit4 33 Oct 16 14:00 -file00
+-rw-r----- 1 bandit5 bandit4 33 Oct 16 14:00 -file01
+-rw-r----- 1 bandit5 bandit4 33 Oct 16 14:00 -file02
+-rw-r----- 1 bandit5 bandit4 33 Oct 16 14:00 -file03
+-rw-r----- 1 bandit5 bandit4 33 Oct 16 14:00 -file04
+-rw-r----- 1 bandit5 bandit4 33 Oct 16 14:00 -file05
+-rw-r----- 1 bandit5 bandit4 33 Oct 16 14:00 -file06
+-rw-r----- 1 bandit5 bandit4 33 Oct 16 14:00 -file07
+-rw-r----- 1 bandit5 bandit4 33 Oct 16 14:00 -file08
+-rw-r----- 1 bandit5 bandit4 33 Oct 16 14:00 -file09</span></code></pre></figure>
+
+<p><br /></p>
+
+<p>All files begin with <code class="highlighter-rouge">-file</code>. The <code class="highlighter-rouge">*</code> (all) displays anything beginning with <code class="highlighter-rouge">-file</code>. The output shows <code class="highlighter-rouge">koReBOKuIDDepwhWk7jZC0RTdopnAYKh</code> which is the only human readable thing in the files.</p>
+
+<figure class="highlight"><pre><code class="language-shell_session" data-lang="shell_session"><span class="gp">bandit4@bandit:~/inhere$</span> <span class="nb">cat</span> ./-file<span class="k">*</span>
+<span class="gp">??????????~%	C[?걱&gt;</span>??| ????U<span class="s2">"7?w???H??ê?Q??(???#????T?v??(?ִ?????A*?
+</span><span class="gp">2J?Ş؇_?y7?.A??u??#</span><span class="s2">???w</span><span class="nv">$N</span><span class="s2">?c?-??Db3??=???=&lt;?W?????ht?Z??!??{?U
+</span><span class="gp">                                                            ?+??pm???;</span><span class="s2">??:D??^??@?gl?Q??@?%@???ZP*E??1?V???̫*????koReBOKuIDDepwhWk7jZC0RTdopnAYKh
+</span><span class="go">FPn?
+    '?U???M??/u
+               XS
+?mu?z???хN?{??Y?d4????]3?????9(?
+</span><span class="gp">bandit4@bandit:~/inhere$</span></code></pre></figure>
+
+<p><br /></p>
+<h2>Bandit 5:</h2>
+
+<p>When viewing inside the <code class="highlighter-rouge">inhere</code> directory there are 9 files with one containing the password.</p>
+
+<figure class="highlight"><pre><code class="language-shell_session" data-lang="shell_session"><span class="gp">bandit4@bandit:~$</span> <span class="nb">ls</span> <span class="nt">-l</span>
+<span class="go">total 4
+drwxr-xr-x 2 root root 4096 Oct 16 14:00 inhere
+</span><span class="gp">bandit4@bandit:~$</span> <span class="nb">cd </span>inhere/
+<span class="gp">bandit4@bandit:~/inhere$</span> <span class="nb">ls</span> <span class="nt">-l</span>
+<span class="go">total 40
+-rw-r----- 1 bandit5 bandit4 33 Oct 16 14:00 -file00
+-rw-r----- 1 bandit5 bandit4 33 Oct 16 14:00 -file01
+-rw-r----- 1 bandit5 bandit4 33 Oct 16 14:00 -file02
+-rw-r----- 1 bandit5 bandit4 33 Oct 16 14:00 -file03
+-rw-r----- 1 bandit5 bandit4 33 Oct 16 14:00 -file04
+-rw-r----- 1 bandit5 bandit4 33 Oct 16 14:00 -file05
+-rw-r----- 1 bandit5 bandit4 33 Oct 16 14:00 -file06
+-rw-r----- 1 bandit5 bandit4 33 Oct 16 14:00 -file07
+-rw-r----- 1 bandit5 bandit4 33 Oct 16 14:00 -file08
+-rw-r----- 1 bandit5 bandit4 33 Oct 16 14:00 -file09</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2>Bandit 6:</h2>
+
+<p>Navigation all the files takes a long time, the <code class="highlighter-rouge">find</code> command is used to find and filter the results.
+The search paramters are a ‘file’ and is ‘1033’ bytes inside the inhere directory. The following filters are applied:<br />
+1) The <code class="highlighter-rouge">-type -f</code> searches for a file.<br />
+2) The <code class="highlighter-rouge">-size 1033c</code> searchs for a file with 1033 bytes.</p>
+
+<figure class="highlight"><pre><code class="language-shell_session" data-lang="shell_session"><span class="gp">bandit5@bandit:~$</span> find inhere/ <span class="nt">-type</span> f <span class="nt">-size</span> 1033c
+<span class="go">inhere/maybehere07/.file2
+</span><span class="gp">bandit5@bandit:~$</span> <span class="nb">cat </span>inhere/maybehere07/.file2
+<span class="go">DXjZPULLxYr17uwoI01bNLQbtFemEgo7</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2>Bandit 7:</h2>
+
+<p>The password file contains 3 paramaters:<br />
+1) A size of 33 bytes <code class="highlighter-rouge">-size 33c</code><br />
+2) Owned by group name of bandit6 <code class="highlighter-rouge">-group bandit6</code><br />
+3) Owned by user bandit7 <code class="highlighter-rouge">-user bandit7</code><br /></p>
+
+<figure class="highlight"><pre><code class="language-shell_session" data-lang="shell_session"><span class="gp">bandit6@bandit:~$</span> find / <span class="nt">-size</span> 33c <span class="nt">-group</span> bandit6 <span class="nt">-user</span> bandit7
+<span class="go">find: ‘/run/lvm’: Permission denied
+find: ‘/run/screen/S-bandit22’: Permission denied
+find: ‘/run/screen/S-bandit18’: Permission denied
+/var/lib/dpkg/info/bandit7.password
+... many more files</span></code></pre></figure>
+<p><br /></p>
+
+<p>All the files were ‘permission denied’ except 1. This file contained the password</p>
+
+<figure class="highlight"><pre><code class="language-shell_session" data-lang="shell_session"><span class="gp">bandit6@bandit:~$</span> <span class="nb">cat</span> /var/lib/dpkg/info/bandit7.password
+<span class="go">HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs</span></code></pre></figure>
+
+<p><br /></p>
+
+<h2>Bandit 8:</h2>
+
+<p>The password is next to the word ‘millionth’ in the file. Using the <code class="highlighter-rouge">grep</code> command, the password is easily found.</p>
+
+<figure class="highlight"><pre><code class="language-shell_session" data-lang="shell_session"><span class="gp">bandit7@bandit:~$</span> <span class="nb">cat </span>data.txt | <span class="nb">grep </span>millionth
+<span class="go">millionth	cvX2JJa4CFALtqS87jk27qwqGhBM9plV</span></code></pre></figure>
+<p><br /></p>
+
+<h2>Bandit 9:</h2>
+
+<p>The data.txt file can be filtered by piping it through <code class="highlighter-rouge">sort</code> to sort the lines. Then using <code class="highlighter-rouge">uniq -u</code>,
+this will only display unique lines being displayed.</p>
+
+<figure class="highlight"><pre><code class="language-shell_session" data-lang="shell_session"><span class="gp">bandit8@bandit:~$</span> <span class="nb">cat </span>data.txt | <span class="nb">sort</span> | <span class="nb">uniq</span> <span class="nt">-u</span>
+<span class="go">UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR</span></code></pre></figure>
+<p><br /></p>
+
+<p><br /></p>
+
+
+  </div>
+
+</article>
+
+</section>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container footer-content">
+    Kyle Simmons &copy;	<script>document.write(new Date().getFullYear())</script>
+  </div>
+</nav>
+
+  </body>
+
+</html>
