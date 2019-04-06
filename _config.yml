@@ -7,16 +7,16 @@
 
 # Site settings
 title: Kyle Simmons
-email: 
+email:
 
 #write html inside the double quotes to display in jumbotron
-description: "<h3>Hello, world!</h3><h1>DevJournal</h1><h3>Awesome Jekyll Theme for Developers!</h3>Hope you like it!"
+description: "<h2>Walthroughs and tutorials!</h2><h3>\x48\x65\x6c\x6c\x6f \x20 \x57\x6f\x72\x6c\x64</h3>"
 
 
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
-twitter_username: 
+twitter_username:
 github_username:  kyle-c-simmons
 
 # Build settings
