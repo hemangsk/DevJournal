@@ -11,7 +11,7 @@ permalink: /about/
   </div>
 <p>  <div class="manual-content">
 
-
+  
 
   </div>
 </p>
