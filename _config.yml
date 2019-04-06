@@ -10,7 +10,7 @@ title: Kyle Simmons
 email:
 
 #write html inside the double quotes to display in jumbotron
-description: "<h1>CTF and blog stuff</h1><h2>\x48\x65\x6c\x6c\x6f \x20 \x57\x6f\x72\x6c\x64</h2>"
+description: "<h2>&#92;x48&#92;x65&#92;x6c&#92;x6c&#92;x6f &#92;x20 &#92;x57&#92;x6f&#92;x72&#92;x6c&#92;x64</h2>"
 
 
 

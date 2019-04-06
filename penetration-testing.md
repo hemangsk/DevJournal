@@ -4,7 +4,7 @@ title: Penetration Testing
 permalink: /penetration-testing/
 ---
 <div class="man-title">
-  Vulnhub Walthroughs  
+  CTF's & Walkthroughs  
 </div>
 <div class="manual manual-title">
   Posting
