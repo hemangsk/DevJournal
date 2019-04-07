@@ -7,7 +7,7 @@ permalink: /ctf/
   CTF Walkthroughs  
 </div>
 <div class="manual manual-title">
-  Posting
+  CTFs:
   </div>
 <p>  <div class="manual-content">
 
