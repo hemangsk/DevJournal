@@ -49,7 +49,6 @@ PORT     STATE SERVICE     VERSION
 |     SSL2_DES_192_EDE3_CBC_WITH_MD5
 |_    SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
 1024/tcp open  status      1 (RPC #100024)
-
 Host script results:
 |_clock-skew: mean: 1h01m48s, deviation: 0s, median: 1h01m48s
 |_nbstat: NetBIOS name: KIOPTRIX, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
