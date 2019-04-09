@@ -12,8 +12,6 @@ email:
 #write html inside the double quotes to display in jumbotron
 description: "<h2>Cyber stuff</h2><h3>&#92;x48&#92;x65&#92;x6c&#92;x6c&#92;x6f &#92;x57&#92;x6f&#92;x72&#92;x6c&#92;x64</h3>"
 
-
-
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 twitter_username:
