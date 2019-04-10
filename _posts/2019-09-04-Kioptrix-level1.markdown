@@ -6,6 +6,7 @@ categories: [vulnhub, vulnerable-machine]
 ---
 Kioptrix level 1 is an easy vulnerable machine on vulnhub, link is below:<br>
 [Kioptrix Level 1 download page]
+<br>
 <h2>1. Enumeration</h2>
 <br>
 The port scan below reveals several open ports including SSH, HTTP, RPC, Samba and 443.
@@ -58,7 +59,7 @@ Host script results:
 <h3>1.1 OpenSSH port 22</h3>
 Using `searchsploit`, there appears to be no known vulnerabilities in the exploit database for OpenSSH.
 <br>
-
+<br>
 <h3>1.2 HTTP port 80</h3>
 Running `dirb` reveals several interesting files including:
 
@@ -109,7 +110,7 @@ a CODE:403 and cannot be accessed so this is a dead end.
 
 Using `searchsploit` to search for these services, `mod_ssl/2.8.4` appears to be Vulnerable
 to a remote buffer overflow exploit.
-<br>
+<br><br>
 <h2>2. Exploitation</h2>
 Exploiting the `mod_ssl/2.8.4` vulnerability:<br>
 The exploit, remote buffer overflow named 'OpenFuck' and 'OpenFuckv2' appears
