@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="Kyle Simmons" property="og:site_name">
+
+  <meta content="Kioptrix Level 2 Walkthrough" property="og:title">
+
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="<h2>Cyber stuff</h2><h3>&#92;x48&#92;x65&#92;x6c&#92;x6c&#92;x6f &#92;x57&#92;x6f&#92;x72&#92;x6c&#92;x64</h3>" property="og:description">
+
+
+  <meta content="http://localhost:4000/vulnhub/vulnerable-machine/2019/04/10/Kioptrix-level2.html" property="og:url">
+
+
+  <meta content="2019-04-10T08:30:02+01:00" property="article:published_time">
+  <meta content="http://localhost:4000/about/" property="article:author">
+
+
+  <meta property="og:image" content="">
+
+
+  
+  <meta content="vulnhub" property="article:section">
+  
+
+
+  
+
+  <title>Kioptrix Level 2 Walkthrough</title>
+  <meta name="description" content="Kioptrix level 2 vulnhub link below: Kioptrix Level 2 download page1. EnumerationThe first step is starting with a port scan to see what services are running...">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/main.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Fira+Mono' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,200,300,500,600,700,900' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Gentium+Basic:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Alegreya:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+  <link rel="canonical" href="http://localhost:4000/vulnhub/vulnerable-machine/2019/04/10/Kioptrix-level2.html">
+  <link rel="alternate" type="application/rss+xml" title="Kyle Simmons" href="http://localhost:4000/feed.xml">
+</head>
+
+
+  <body>
+<section>
+<nav class="navbar navbar-default navbar-fixed-top">
+
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Kyle Simmons</a>
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        
+        <li><a href="/">Home</a></li>
+
+        
+
+        
+        
+        <li><a href="/ctf/">CTF</a></li>
+
+        
+
+        
+        
+
+        
+        
+
+        
+        
+
+        
+        
+        <li><a href="/penetration-testing/">Penetration Testing</a></li>
+
+        
+
+        
+
+
+      </ul>
+
+    <!--  <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Know More!</a></li>
+
+      </ul>-->
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</section>
+
+<section>
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="post-title-main" itemprop="name headline">Kioptrix Level 2 Walkthrough</h1>
+      <p class="post-meta"><time datetime="2019-04-10T08:30:02+01:00" itemprop="datePublished">Apr 10, 2019</time></p>
+      
+    </div>
+
+</div>
+
+
+  <div class="post-content container" itemprop="articleBody">
+    <p>Kioptrix level 2 vulnhub link below: <br />
+<a href="https://www.vulnhub.com/entry/kioptrix-level-11-2,23/">Kioptrix Level 2 download page</a>
+<br /><br /></p>
+<h2>1. Enumeration</h2>
+<p>The first step is starting with a port scan to see what services are running.</p>
+
+<figure class="highlight"><pre><code class="language-shell_session" data-lang="shell_session"><span class="go">nmap -T4 -sV -A -oA nmapscan 192.168.0.70
+Nmap scan report for 192.168.0.70
+Host is up (0.12s latency).
+Not shown: 994 closed ports
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 3.9p1 (protocol 1.99)
+| ssh-hostkey:
+|   1024 8f:3e:8b:1e:58:63:fe:cf:27:a3:18:09:3b:52:cf:72 (RSA1)
+|   1024 34:6b:45:3d:ba:ce:ca:b2:53:55:ef:1e:43:70:38:36 (DSA)
+|_  1024 68:4d:8c:bb:b6:5a:bd:79:71:b8:71:47:ea:00:42:61 (RSA)
+|_sshv1: Server supports SSHv1
+80/tcp   open  http     Apache httpd 2.0.52 ((CentOS))
+|_http-server-header: Apache/2.0.52 (CentOS)
+</span><span class="gp">|_http-title: Site doesn't have a title (text/html;</span> <span class="nv">charset</span><span class="o">=</span>UTF-8<span class="o">)</span><span class="nb">.</span>
+<span class="gp">111/tcp  open  rpcbind  2 (RPC #</span>100000<span class="o">)</span>
+<span class="go">| rpcinfo:
+|   program version   port/proto  service
+|   100000  2            111/tcp  rpcbind
+|   100000  2            111/udp  rpcbind
+|   100024  1            647/udp  status
+|_  100024  1            650/tcp  status
+443/tcp  open  ssl/http Apache httpd 2.0.52 ((CentOS))
+|_http-server-header: Apache/2.0.52 (CentOS)
+</span><span class="gp">|_http-title: Site doesn't have a title (text/html;</span> <span class="nv">charset</span><span class="o">=</span>UTF-8<span class="o">)</span><span class="nb">.</span>
+<span class="go">| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--
+| Not valid before: 2009-10-08T00:10:47
+|_Not valid after:  2010-10-08T00:10:47
+</span><span class="gp">|_ssl-date: 2019-04-09T18:03:07+00:00;</span> <span class="nt">-3h09m40s</span> from scanner time.
+<span class="go">| sslv2:
+|   SSLv2 supported
+|   ciphers:
+|     SSL2_RC4_64_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|_    SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+631/tcp  open  ipp      CUPS 1.1
+| http-methods:
+|_  Potentially risky methods: PUT
+|_http-server-header: CUPS/1.1
+|_http-title: 403 Forbidden
+3306/tcp open  mysql    MySQL (unauthorized)
+
+Host script results:
+|_clock-skew: mean: -3h09m40s, deviation: 0s, median: -3h09m40s
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .</span></code></pre></figure>
+
+<p><br />
+The port scan results show SSH, HTTP, rpcbind, SLL, ipp and mysql running. The next is to perform
+enumeration on these ports.
+<br /><br /></p>
+<h3 color="red">1.1 SSH</h3>
+<p>SSH is running the same versions as level 1 which are not vulnerable and searchsploit
+came back with nothing on the SSH versions.
+<br /><br /></p>
+<h3>1.2 HTTP</h3>
+<p>The HTTP server is running apache 2.0.52 which is vulnerable to a <code class="highlighter-rouge">GET Denial of Service</code>
+exploit. However, this will not help get a reverse shell. Dirb and Nikto does not reveal any useful information.
+<br /><br /></p>
+<h3>1.3 ipp CUPS 1.1 631</h3>
+<p>CUPS 1.1 has a remote command execution exploit, however i could not get this exploit to work.
+<br /><br /></p>
+<h2> 2.1 Exploitation of web server</h2>
+<p>The webpage contains a login promopt which could potentially be connected to the SQL database since
+mysql is running on port 3306. SQL Injection could be tried here.<br /><br />
+<img src="/assets/images/Kioptrix/Kioptrix2-loginprompt.png" alt="Kioptrix level 2 login prompt" />
+<br /><br />
+An assumption is made that that the login query is using <code class="highlighter-rouge">SELECT * FROM users WHERE username='random' AND password='password'</code>
+or something similar. To test for SQL Injection a random username was entered, and in the password field the following <code class="highlighter-rouge">1' or '1' = '1'#</code> was used. The query checks if the password is equal to ‘1’ or 1=1. When clicking ‘Login’, the SQL Injection is
+executed and login is successful.
+<br /><br /></p>
+<p style="text-align: center;"><img src="/assets/images/Kioptrix/Kioptrix2-ping.png" alt="Kioptrix level 2 Command Execution" /></p>
+<p><br /><br />
+A admin web console appears with a ‘ping a network’ input field. This looks similar to DVWA’s command
+execution part. An attempt is made to use a <code class="highlighter-rouge">;</code> after the IP address to try and execute the <code class="highlighter-rouge">id</code> command.
+This works! The id is returned as <code class="highlighter-rouge">uid=48(apache) gid=48(apache) groups=48(apache)</code>. Since i do not have
+root access, privilege escalation has to be done to try and get root.
+<br /><br /></p>
+<h2> 3.1 Post exploitation</h2>
+<p>After looking through the file system serveral useful information has been found.<br />
+-&gt; passwd file is viewable <code class="highlighter-rouge">cat /etc/passwd</code> which contains a list of all the users on the system. <br />
+-&gt; PHP file in www/html contains the SQL login username / password. <br />
+-&gt; The Kernel version is retrieved using <code class="highlighter-rouge">uname -r</code> which is running 2.6.9-55.EL and the system is running CentOS.
+<br /><br />
+Searchsploit is used to find kernel exploits of <code class="highlighter-rouge">2.6.9</code>, a local exploit is found: <br /><br />
+<a href="https://www.exploit-db.com/exploits/9545">LINK: ExploitDB - Linux Kernel 2.4.x/2.6 Local Privilege Escalation</a>
+<br /><br />
+Even though an exploit has been found, the exploit needs to be downloaded on the system.
+After looking around, i found that the /tmp directory has write permissions for everyone.
+Using <code class="highlighter-rouge">wget</code>, the exploit is downloaded from an external HTTP server that i setup. The exploit is
+then compiled using <code class="highlighter-rouge">gcc exploit.c -o exploit</code> which allows the exploit to be executed. When exploit
+is executed, the privileges are escalated and i have root access (shown below).
+<br /><br />
+<img src="/assets/images/Kioptrix/Kioptrix2-root-access-gained.png" alt="Kioptrix level 2 Root access gained " /></p>
+
+
+  </div>
+
+</article>
+
+</section>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container footer-content">
+    Kyle Simmons &copy;	<script>document.write(new Date().getFullYear())</script>
+  </div>
+</nav>
+
+  </body>
+
+</html>
