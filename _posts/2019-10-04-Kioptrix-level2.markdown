@@ -23,7 +23,7 @@ PORT     STATE SERVICE  VERSION
 |_sshv1: Server supports SSHv1
 80/tcp   open  http     Apache httpd 2.0.52 ((CentOS))
 |_http-server-header: Apache/2.0.52 (CentOS)
-|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+|_http-title: Site doesnt have a title (text/html; charset=UTF-8).
 111/tcp  open  rpcbind  2 (RPC #100000)
 | rpcinfo:
 |   program version   port/proto  service
@@ -33,8 +33,7 @@ PORT     STATE SERVICE  VERSION
 |_  100024  1            650/tcp  status
 443/tcp  open  ssl/http Apache httpd 2.0.52 ((CentOS))
 |_http-server-header: Apache/2.0.52 (CentOS)
-|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
-| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--
+|_http-title: Site doesnt have a title (text/html; charset=UTF-8)
 | Not valid before: 2009-10-08T00:10:47
 |_Not valid after:  2010-10-08T00:10:47
 |_ssl-date: 2019-04-09T18:03:07+00:00; -3h09m40s from scanner time.
@@ -53,9 +52,7 @@ PORT     STATE SERVICE  VERSION
 |_http-server-header: CUPS/1.1
 |_http-title: 403 Forbidden
 3306/tcp open  mysql    MySQL (unauthorized)
-
 Host script results:
-|_clock-skew: mean: -3h09m40s, deviation: 0s, median: -3h09m40s
 {% endhighlight %}<br>
 
 The port scan results show SSH, HTTP, rpcbind, SLL, ipp and mysql running. The next is to perform
