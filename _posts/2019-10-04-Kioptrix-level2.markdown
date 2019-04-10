@@ -61,7 +61,7 @@ Host script results:
 The port scan results show SSH, HTTP, rpcbind, SLL, ipp and mysql running. The next is to perform
 enumeration on these ports.
 <br><br>
-<h3 color="red">1.1 SSH</h3>
+<h3>1.1 SSH</h3>
 SSH is running the same versions as level 1 which are not vulnerable and searchsploit
 came back with nothing on the SSH versions.
 <br><br>
