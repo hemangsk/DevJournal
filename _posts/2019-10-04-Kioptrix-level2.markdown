@@ -58,7 +58,6 @@ PORT     STATE SERVICE  VERSION
 Host script results:
 |_clock-skew: mean: -3h09m40s, deviation: 0s, median: -3h09m40s
 
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 {% endhighlight %}
 <br>
 The port scan results show SSH, HTTP, rpcbind, SLL, ipp and mysql running. The next is to perform
