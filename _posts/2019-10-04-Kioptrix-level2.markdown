@@ -50,16 +50,14 @@ PORT     STATE SERVICE  VERSION
 |_    SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
 631/tcp  open  ipp      CUPS 1.1
 | http-methods:
-|_  Potentially risky methods: PUT
 |_http-server-header: CUPS/1.1
 |_http-title: 403 Forbidden
 3306/tcp open  mysql    MySQL (unauthorized)
 
 Host script results:
 |_clock-skew: mean: -3h09m40s, deviation: 0s, median: -3h09m40s
+{% endhighlight %}<br>
 
-{% endhighlight %}
-<br>
 The port scan results show SSH, HTTP, rpcbind, SLL, ipp and mysql running. The next is to perform
 enumeration on these ports.
 <br><br>
