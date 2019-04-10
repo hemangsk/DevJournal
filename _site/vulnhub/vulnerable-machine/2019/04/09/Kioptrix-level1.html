@@ -131,7 +131,8 @@
 
   <div class="post-content container" itemprop="articleBody">
     <p>Kioptrix level 1 is an easy vulnerable machine on vulnhub, link is below:<br />
-<a href="https://www.vulnhub.com/entry/kioptrix-level-1-1,22/">Kioptrix Level 1 download page</a></p>
+<a href="https://www.vulnhub.com/entry/kioptrix-level-1-1,22/">Kioptrix Level 1 download page</a>
+<br /></p>
 <h2>1. Enumeration</h2>
 <p><br />
 The port scan below reveals several open ports including SSH, HTTP, RPC, Samba and 443.</p>
@@ -183,8 +184,8 @@ PORT     STATE SERVICE     VERSION
 
 <h3>1.1 OpenSSH port 22</h3>
 <p>Using <code class="highlighter-rouge">searchsploit</code>, there appears to be no known vulnerabilities in the exploit database for OpenSSH.
+<br />
 <br /></p>
-
 <h3>1.2 HTTP port 80</h3>
 <p>Running <code class="highlighter-rouge">dirb</code> reveals several interesting files including:</p>
 
@@ -234,7 +235,7 @@ a CODE:403 and cannot be accessed so this is a dead end.</p>
 
 <p>Using <code class="highlighter-rouge">searchsploit</code> to search for these services, <code class="highlighter-rouge">mod_ssl/2.8.4</code> appears to be Vulnerable
 to a remote buffer overflow exploit.
-<br /></p>
+<br /><br /></p>
 <h2>2. Exploitation</h2>
 <p>Exploiting the <code class="highlighter-rouge">mod_ssl/2.8.4</code> vulnerability:<br />
 The exploit, remote buffer overflow named ‘OpenFuck’ and ‘OpenFuckv2’ appears

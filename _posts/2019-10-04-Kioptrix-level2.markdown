@@ -8,7 +8,7 @@ Kioptrix level 2 vulnhub link below: <br>
 [Kioptrix Level 2 download page]
 <br><br>
 <h2>1. Enumeration</h2>
-The first step is starting with a port scan to see what services are running.
+The first plan is starting with a port scan to see what services are running.
 {% highlight shell_session %}
 nmap -T4 -sV -A -oA nmapscan 192.168.0.70
 Nmap scan report for 192.168.0.70

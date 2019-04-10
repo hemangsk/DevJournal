@@ -5,8 +5,8 @@
     <description>&lt;h2&gt;Cyber stuff&lt;/h2&gt;&lt;h3&gt;&amp;#92;x48&amp;#92;x65&amp;#92;x6c&amp;#92;x6c&amp;#92;x6f &amp;#92;x57&amp;#92;x6f&amp;#92;x72&amp;#92;x6c&amp;#92;x64&lt;/h3&gt;</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 10 Apr 2019 14:08:24 +0100</pubDate>
-    <lastBuildDate>Wed, 10 Apr 2019 14:08:24 +0100</lastBuildDate>
+    <pubDate>Wed, 10 Apr 2019 14:13:34 +0100</pubDate>
+    <lastBuildDate>Wed, 10 Apr 2019 14:13:34 +0100</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -15,7 +15,7 @@
 &lt;a href=&quot;https://www.vulnhub.com/entry/kioptrix-level-11-2,23/&quot;&gt;Kioptrix Level 2 download page&lt;/a&gt;
 &lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;1. Enumeration&lt;/h2&gt;
-&lt;p&gt;The first step is starting with a port scan to see what services are running.&lt;/p&gt;
+&lt;p&gt;The first plan is starting with a port scan to see what services are running.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-shell_session&quot; data-lang=&quot;shell_session&quot;&gt;&lt;span class=&quot;go&quot;&gt;nmap -T4 -sV -A -oA nmapscan 192.168.0.70
 Nmap scan report for 192.168.0.70
@@ -130,7 +130,8 @@ is executed, the privileges are escalated and i have root access (shown below).
       <item>
         <title>Kioptrix Level 1 Walkthrough</title>
         <description>&lt;p&gt;Kioptrix level 1 is an easy vulnerable machine on vulnhub, link is below:&lt;br /&gt;
-&lt;a href=&quot;https://www.vulnhub.com/entry/kioptrix-level-1-1,22/&quot;&gt;Kioptrix Level 1 download page&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&quot;https://www.vulnhub.com/entry/kioptrix-level-1-1,22/&quot;&gt;Kioptrix Level 1 download page&lt;/a&gt;
+&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;1. Enumeration&lt;/h2&gt;
 &lt;p&gt;&lt;br /&gt;
 The port scan below reveals several open ports including SSH, HTTP, RPC, Samba and 443.&lt;/p&gt;
@@ -182,8 +183,8 @@ PORT     STATE SERVICE     VERSION
 
 &lt;h3&gt;1.1 OpenSSH port 22&lt;/h3&gt;
 &lt;p&gt;Using &lt;code class=&quot;highlighter-rouge&quot;&gt;searchsploit&lt;/code&gt;, there appears to be no known vulnerabilities in the exploit database for OpenSSH.
+&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
-
 &lt;h3&gt;1.2 HTTP port 80&lt;/h3&gt;
 &lt;p&gt;Running &lt;code class=&quot;highlighter-rouge&quot;&gt;dirb&lt;/code&gt; reveals several interesting files including:&lt;/p&gt;
 
@@ -233,7 +234,7 @@ a CODE:403 and cannot be accessed so this is a dead end.&lt;/p&gt;
 
 &lt;p&gt;Using &lt;code class=&quot;highlighter-rouge&quot;&gt;searchsploit&lt;/code&gt; to search for these services, &lt;code class=&quot;highlighter-rouge&quot;&gt;mod_ssl/2.8.4&lt;/code&gt; appears to be Vulnerable
 to a remote buffer overflow exploit.
-&lt;br /&gt;&lt;/p&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h2&gt;2. Exploitation&lt;/h2&gt;
 &lt;p&gt;Exploiting the &lt;code class=&quot;highlighter-rouge&quot;&gt;mod_ssl/2.8.4&lt;/code&gt; vulnerability:&lt;br /&gt;
 The exploit, remote buffer overflow named ‘OpenFuck’ and ‘OpenFuckv2’ appears
